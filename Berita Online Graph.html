@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -62,9 +62,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Berita Online Graph';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tugas 4 Crawling Berita Detik (Sport, Health, Travel)" href="Detik%20Sport%20and%20Health.html" />
     <link rel="prev" title="Tugas 2 Topic Modelling" href="Topic%20Modelling.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -138,6 +141,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="PPW.html">
@@ -169,6 +173,8 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Topic%20Modelling.html">Tugas 2 Topic Modelling</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 3 Graph Berita Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Detik%20Sport%20and%20Health.html">Tugas 4 Crawling Berita Detik (Sport, Health, Travel)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasifikasi%20Data%20Detik.html">Tugas 5 Klasifikasi Data Berita Detik</a></li>
 </ul>
 
     </div>
@@ -353,6 +359,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -362,6 +369,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -451,6 +459,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>				Jakarta (ANTARA) - Manchester City sukses meraih treble winners usai menekuk Inter Milan dengan skor 1-0 pada final Liga Champions di Stadion Ataturk Olympic, Istanbul, Turki, Minggu dini hari WIB.
 Kemenangan Manchester City atas Inter Milan hadir berkat gol yang dicetak Rodri pada babak kedua, demikian catatan Liga Champions.
 Ini merupakan gelar Liga Champions pertama Manchester City setelah pada dua tahun sebelumnya gagal menjadi juara usai dikalahkan Chelsea pada partai final.
@@ -466,10 +478,6 @@ Selanjutnya giliran Romelu Lukaku yang memberikan ancaman, akan tetapi tendangan
 Menjelang berakhirnya babak kedua, Inter memiliki dua peluang emas melalui sundulan Lukaku serta Robin Gosens, akan tetapi kedua upaya tersebut sehingga skor 1-0 untuk keunggulan Manchester City tetap bertahan.
 Baca juga: Inzaghi: Kami akan lakukan yang terbaik untuk lawan tim yang kuat
 Baca juga: Pep: Sebuah hak istimewa jika dapat memenangkan Trebel WinnersPewarta: Aldi SultanEditor: Teguh Handoko				COPYRIGHT © ANTARA 2023
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
 </pre></div>
 </div>
 </div>
@@ -644,9 +652,7 @@ masih: 0.1416
 melalui: 0.1284
 memberikan: 0.1284
 mengambil: 0.2079
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>menyerang: 0.2079
+menyerang: 0.2079
 onana: 0.1786
 pada: 0.1076
 sempat: 0.2079
@@ -823,11 +829,15 @@ yang: 0.1888
 </section>
 <section id="cosinus-similarity">
 <h2>Cosinus Similarity<a class="headerlink" href="#cosinus-similarity" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
+<ul>
 <li><p>Mengimpor dua kelas dari scikit-learn yang akan digunakan untuk menghitung cosine similarity dan menghasilkan vektor TF-IDF.</p></li>
 <li><p>Menentukan indeks dari dua kalimat yang akan dibandingkan. Indeks ini merujuk pada posisi kalimat dalam suatu data atau daftar kalimat yang diwakili oleh matriks TF-IDF.</p></li>
 <li><p>Mengambil vektor TF-IDF untuk masing-masing kalimat dari matriks TF-IDF. Matriks TF-IDF menyajikan representasi numerik dari kata-kata dalam dokumen berdasarkan frekuensi kata dan bobot invers dokumen.</p></li>
-<li><p>Menggunakan fungsi cosine_similarity dari scikit-learn untuk menghitung cosine similarity antara dua vektor TF-IDF. Hasilnya akan menjadi nilai similarity antara kedua kalimat.</p></li>
+<li><p>Menggunakan fungsi cosine_similarity dari scikit-learn untuk menghitung cosine similarity antara dua vektor TF-IDF. Hasilnya akan menjadi nilai similarity antara kedua kalimat.</p>
+<p><span class="math notranslate nohighlight">\(\text{Cosine Similarity}(\mathbf{A}, \mathbf{B}) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \cdot \|\mathbf{B}\|}\)</span></p>
+<p>Alternatif:</p>
+<p><span class="math notranslate nohighlight">\(\text{Cosine Similarity}(\text{dokumen}_1, \text{dokumen}_2) = \frac{\sum_{i} \text{TF-IDF}_1(i) \times \text{TF-IDF}_2(i)}{\sqrt{\sum_{i} (\text{TF-IDF}_1(i))^2} \times \sqrt{\sum_{i} (\text{TF-IDF}_2(i))^2}}\)</span></p>
+</li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -961,7 +971,7 @@ Cosine Similarity antara Kalimat 11 dan Kalimat 12: 0.0472
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c8b12693-2b7a-4153-b1c7-7cdb0d616e5e" class="colab-df-container">
+  <div id="df-48527950-741c-416d-85fe-5aa34ee31ee3" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1181,7 +1191,7 @@ Cosine Similarity antara Kalimat 11 dan Kalimat 12: 0.0472
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-c8b12693-2b7a-4153-b1c7-7cdb0d616e5e')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-48527950-741c-416d-85fe-5aa34ee31ee3')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1233,12 +1243,12 @@ Cosine Similarity antara Kalimat 11 dan Kalimat 12: 0.0472
 
     <script>
       const buttonEl =
-        document.querySelector('#df-c8b12693-2b7a-4153-b1c7-7cdb0d616e5e button.colab-df-convert');
+        document.querySelector('#df-48527950-741c-416d-85fe-5aa34ee31ee3 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-c8b12693-2b7a-4153-b1c7-7cdb0d616e5e');
+        const element = document.querySelector('#df-48527950-741c-416d-85fe-5aa34ee31ee3');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1322,12 +1332,14 @@ text = ax.text(j, i, f’{df.iat[i, j]:.2f}’, ha=’center’, va=’center’
 </section>
 <section id="closeness-centrality">
 <h2>Closeness Centrality<a class="headerlink" href="#closeness-centrality" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
+<ul>
 <li><p>Import Library: Kode dimulai dengan mengimpor pustaka networkx dengan alias nx. Library ini digunakan untuk manipulasi dan analisis graf.</p></li>
 <li><p>Inisialisasi Graf: Sebuah objek graf (G) dibuat sebagai objek dari kelas Graph dari pustaka networkx.</p></li>
 <li><p>Tambahkan Simpul: Setiap kalimat dalam sentences ditambahkan sebagai simpul (node) ke dalam graf.</p></li>
 <li><p>Tambahkan Tepi Berdasarkan Similarity: Tepi (edge) antara kalimat ditambahkan ke graf berdasarkan nilai similarity antara kalimat-kalimat tersebut.</p></li>
-<li><p>Hitung Closeness Centrality: Closeness centrality dihitung untuk setiap simpul dalam grafik. Closeness centrality mengukur seberapa dekat suatu simpul dengan simpul-simpul lain dalam grafik.</p></li>
+<li><p>Hitung Closeness Centrality: Closeness centrality dihitung untuk setiap simpul dalam grafik. Closeness centrality mengukur seberapa dekat suatu simpul dengan simpul-simpul lain dalam grafik.</p>
+<p><span class="math notranslate nohighlight">\(C_i = \frac{1}{\sum_{j} d(i, j)}\)</span></p>
+</li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1416,7 +1428,7 @@ Baca juga: Pep: Sebuah hak istimewa jika dapat memenangkan Trebel WinnersPewarta
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/4dbd34ae259ae02d6b267430f1110d729e4efe06ff18fbbc43b43bb2498c218b.png" src="_images/4dbd34ae259ae02d6b267430f1110d729e4efe06ff18fbbc43b43bb2498c218b.png" />
+<img alt="_images/d29b90d3d469dcddb07ff8e08cedfe51c6f0b9732a8387d0063561ba6af7a880.png" src="_images/d29b90d3d469dcddb07ff8e08cedfe51c6f0b9732a8387d0063561ba6af7a880.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Closeness Centrality:
 Node 0: 0.8462
 Node 1: 1.0000
@@ -1474,7 +1486,7 @@ Mengurutkan node berdasarkan nilai closeness centrality secara menurun.</p></li>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5502e745-faf4-4478-b26e-035f8dca6931" class="colab-df-container">
+  <div id="df-bcd4ea64-8c99-4d05-97b0-78671989cf75" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1523,7 +1535,7 @@ Mengurutkan node berdasarkan nilai closeness centrality secara menurun.</p></li>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-5502e745-faf4-4478-b26e-035f8dca6931')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-bcd4ea64-8c99-4d05-97b0-78671989cf75')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1575,12 +1587,12 @@ Mengurutkan node berdasarkan nilai closeness centrality secara menurun.</p></li>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-5502e745-faf4-4478-b26e-035f8dca6931 button.colab-df-convert');
+        document.querySelector('#df-bcd4ea64-8c99-4d05-97b0-78671989cf75 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-5502e745-faf4-4478-b26e-035f8dca6931');
+        const element = document.querySelector('#df-bcd4ea64-8c99-4d05-97b0-78671989cf75');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1637,7 +1649,7 @@ Mengurutkan node berdasarkan nilai closeness centrality secara menurun.</p></li>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-478cefc9-d188-4f62-982c-1d0b1837d511" class="colab-df-container">
+  <div id="df-51b7ed27-e6a3-4cce-a863-5149ad0e41ed" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1686,7 +1698,7 @@ Mengurutkan node berdasarkan nilai closeness centrality secara menurun.</p></li>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-478cefc9-d188-4f62-982c-1d0b1837d511')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-51b7ed27-e6a3-4cce-a863-5149ad0e41ed')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1738,12 +1750,12 @@ Mengurutkan node berdasarkan nilai closeness centrality secara menurun.</p></li>
 
     <script>
       const buttonEl =
-        document.querySelector('#df-478cefc9-d188-4f62-982c-1d0b1837d511 button.colab-df-convert');
+        document.querySelector('#df-51b7ed27-e6a3-4cce-a863-5149ad0e41ed button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-478cefc9-d188-4f62-982c-1d0b1837d511');
+        const element = document.querySelector('#df-51b7ed27-e6a3-4cce-a863-5149ad0e41ed');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1804,7 +1816,7 @@ Mengurutkan node-node berdasarkan nilai eigenvector centrality secara menurun.</
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-2e3e5c95-de17-4d46-983a-7bbadcbd3f5f" class="colab-df-container">
+  <div id="df-f476c9d3-3f1f-4291-ad9f-08c78d69d8cb" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1853,7 +1865,7 @@ Mengurutkan node-node berdasarkan nilai eigenvector centrality secara menurun.</
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-2e3e5c95-de17-4d46-983a-7bbadcbd3f5f')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f476c9d3-3f1f-4291-ad9f-08c78d69d8cb')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1905,12 +1917,12 @@ Mengurutkan node-node berdasarkan nilai eigenvector centrality secara menurun.</
 
     <script>
       const buttonEl =
-        document.querySelector('#df-2e3e5c95-de17-4d46-983a-7bbadcbd3f5f button.colab-df-convert');
+        document.querySelector('#df-f476c9d3-3f1f-4291-ad9f-08c78d69d8cb button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-2e3e5c95-de17-4d46-983a-7bbadcbd3f5f');
+        const element = document.querySelector('#df-f476c9d3-3f1f-4291-ad9f-08c78d69d8cb');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1964,7 +1976,7 @@ Mengurutkan node-node berdasarkan nilai eigenvector centrality secara menurun.</
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="Topic%20Modelling.html"
@@ -1974,6 +1986,15 @@ Mengurutkan node-node berdasarkan nilai eigenvector centrality secara menurun.</
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Tugas 2 Topic Modelling</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Detik%20Sport%20and%20Health.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tugas 4 Crawling Berita Detik (Sport, Health, Travel)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -2019,6 +2040,7 @@ By Bagas Pratama Putra
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -2045,8 +2067,8 @@ By Bagas Pratama Putra
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>

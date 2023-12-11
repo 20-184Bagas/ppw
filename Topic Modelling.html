@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Topic Modelling';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -139,6 +141,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="PPW.html">
@@ -170,6 +173,8 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 2 Topic Modelling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Berita%20Online%20Graph.html">Tugas 3 Graph Berita Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Detik%20Sport%20and%20Health.html">Tugas 4 Crawling Berita Detik (Sport, Health, Travel)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Klasifikasi%20Data%20Detik.html">Tugas 5 Klasifikasi Data Berita Detik</a></li>
 </ul>
 
     </div>
@@ -354,6 +359,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -363,6 +369,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -401,7 +408,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slang-words">Slang Words</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stopwords-and-tokenize">Stopwords and Tokenize</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf">TF-IDF</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering-k-means">clustering K-Means</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">TF-IDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering-k-means">Clustering K-Means</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#silhouette-score">Silhouette Score</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lda">LDA</a></li>
 </ul>
@@ -2454,6 +2462,34 @@ document.write(`
 </section>
 <section id="tf-idf">
 <h2>TF-IDF<a class="headerlink" href="#tf-idf" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="id1">
+<h2>TF-IDF<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>TF-IDF merupakan singkatan dari Term Frequency-Inverse Document Frequency. Ini adalah statistik numerik yang digunakan dalam temuan informasi dan penambangan teks untuk mengevaluasi pentingnya sebuah kata dalam suatu dokumen relatif terhadap kumpulan dokumen (korpus). TF-IDF umumnya digunakan untuk tugas berbasis teks seperti temuan dokumen, ringkasan teks, dan pengelompokan dokumen.</p>
+<p>A. Term Frequency (TF):</p>
+<ul>
+<li><p>Mengukur seberapa sering suatu term (kata) muncul dalam suatu dokumen.</p></li>
+<li><p>Dihitung sebagai rasio jumlah kali suatu term muncul dalam suatu dokumen terhadap total jumlah term dalam dokumen tersebut.</p></li>
+<li><p>Ide dasarnya adalah suatu term lebih penting dalam suatu dokumen jika muncul secara sering.</p>
+<p><span class="math notranslate nohighlight">\(\text{TF}(t, d) = \frac{\text{Number of times term } t \text{ appears in document } d}{\text{Total number of terms in document } d}\)</span></p>
+</li>
+</ul>
+<p>B. Inverse Document Frequency (IDF):</p>
+<ul>
+<li><p>Mengukur seberapa penting suatu term di seluruh kumpulan dokumen (korpus).</p></li>
+<li><p>Term yang jarang muncul tetapi hadir dalam beberapa dokumen memiliki nilai IDF yang lebih tinggi.</p></li>
+<li><p>Ini membantu mengidentifikasi term-term yang khas dan penting dalam suatu dokumen tertentu.</p>
+<p><span class="math notranslate nohighlight">\(\text{IDF}(t, D) = \log\left(\frac{\text{Total number of documents in the corpus } D}{\text{Number of documents containing term } t}\right)\)</span></p>
+</li>
+</ul>
+<p>C. Skor TF-IDF:</p>
+<ul>
+<li><p>Skor TF-IDF untuk suatu term dalam suatu dokumen adalah hasil perkalian dari skor TF dan IDF.</p></li>
+<li><p>\Ini mengukur seberapa relevan suatu term dengan suatu dokumen dalam konteks seluruh korpus.</p>
+<p><span class="math notranslate nohighlight">\(\text{TF-IDF}(t, d, D) = \text{TF}(t, d) \times \text{IDF}(t, D)\)</span></p>
+</li>
+</ul>
+<p>Penjelasan kode:</p>
 <ul class="simple">
 <li><p>Objek countvectorizer dan tfidfvectorizer dibuat menggunakan kelas CountVectorizer dan TfidfVectorizer masing-masing.</p></li>
 <li><p>Parameter analyzer=’word’ mengindikasikan bahwa analisis dilakukan pada tingkat kata.</p></li>
@@ -3022,14 +3058,20 @@ document.write(`
 </div>
 </section>
 <section id="clustering-k-means">
-<h2>clustering K-Means<a class="headerlink" href="#clustering-k-means" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
+<h2>Clustering K-Means<a class="headerlink" href="#clustering-k-means" title="Permalink to this heading">#</a></h2>
+<ul>
 <li><p>from sklearn.cluster import KMeans: Mengimpor kelas KMeans dari modul sklearn.cluster. sklearn adalah paket di Python yang menyediakan banyak alat untuk machine learning dan data mining.</p></li>
 <li><p>X = tfidf_wm: Matriks fitur X diambil dari TF-IDF (Term Frequency-Inverse Document Frequency) yang disimpan dalam variabel tfidf_wm. Jika Anda ingin menggunakan Count Vectorizer, Anda dapat mengganti ini dengan count_wm.</p></li>
 <li><p>kmeans = KMeans(n_clusters=2, random_state=0): Membuat objek model K-Means dengan menentukan jumlah cluster yang diinginkan (n_clusters=2) dan inisialisasi nilai acak (random_state=0). Dalam contoh ini, jumlah cluster yang diinginkan adalah 2, artinya data akan dikelompokkan menjadi dua kelompok.</p></li>
 <li><p>kmeans.fit(X): Melatih model K-Means dengan menggunakan matriks fitur X.</p></li>
 <li><p>df_countvect[‘Cluster’] = kmeans.labels_: Menambahkan label cluster yang dihasilkan oleh K-Means ke dalam DataFrame df_countvect. Setiap data (baris) akan mendapatkan label cluster sesuai dengan kelompok di mana data tersebut ditempatkan.</p></li>
-<li><p>df_countvect[[“Judul”,”Cluster”]]: Menampilkan kolom “Judul” dan “Cluster” dari DataFrame df_countvect yang telah diberi label cluster.</p></li>
+<li><p>df_countvect[[“Judul”,”Cluster”]]: Menampilkan kolom “Judul” dan “Cluster” dari DataFrame df_countvect yang telah diberi label cluster.</p>
+<p><span class="math notranslate nohighlight">\(\text{K-Means}(\text{Data}, k) = \{\text{Cluster}_1, \text{Cluster}_2, \ldots, \text{Cluster}_k\}\)</span></p>
+<p>Representasi K-Means:</p>
+<p><span class="math notranslate nohighlight">\(\text{Pusat Cluster}_i = (\text{c}_{i1}, \text{c}_{i2}, \ldots, \text{c}_{id})\)</span></p>
+<p>Asosiasi dengan cluster:</p>
+<p><span class="math notranslate nohighlight">\(\text{Asosiasi}(\text{Data}, \text{K-Means}) = \{\text{Data}_1 \rightarrow \text{Cluster}_{\text{assign}_1}, \text{Data}_2 \rightarrow \text{Cluster}_{\text{assign}_2}, \ldots\}\)</span></p>
+</li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3350,9 +3392,13 @@ document.write(`
 </section>
 <section id="silhouette-score">
 <h2>Silhouette Score<a class="headerlink" href="#silhouette-score" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
+<ul>
 <li><p>from sklearn.metrics import silhouette_score: Baris pertama mengimpor fungsi silhouette_score dari modul metrics dalam library scikit-learn. Fungsi ini digunakan untuk menghitung skor Silhouette.</p></li>
-<li><p>silhouette_avg = silhouette_score(X, kmeans.labels_): Baris kedua menghitung skor Silhouette dengan memanggil fungsi silhouette_score. Parameter pertama, X, adalah matriks fitur data yang digunakan untuk clustering. Parameter kedua, kmeans.labels_, adalah label-cluster yang diberikan oleh model K-Means (kmeans).</p></li>
+<li><p>silhouette_avg = silhouette_score(X, kmeans.labels_): Baris kedua menghitung skor Silhouette dengan memanggil fungsi silhouette_score. Parameter pertama, X, adalah matriks fitur data yang digunakan untuk clustering. Parameter kedua, kmeans.labels_, adalah label-cluster yang diberikan oleh model K-Means (kmeans).</p>
+<p><span class="math notranslate nohighlight">\(\text{Silhouette Score}(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}}\)</span></p>
+<p>Score rata-rata seluruh data:</p>
+<p><span class="math notranslate nohighlight">\(\text{Silhouette Score}(\text{Data}) = \frac{\sum_{i=1}^{n} \text{Silhouette Score}(i)}{n}\)</span></p>
+</li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3926,13 +3972,37 @@ Name: Judul, Length: 345, dtype: object
 </section>
 <section id="lda">
 <h2>LDA<a class="headerlink" href="#lda" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
+<ul>
 <li><p>LatentDirichletAllocation: Ini adalah kelas dalam modul scikit-learn yang digunakan untuk menerapkan model LDA. LDA adalah algoritma probabilistik yang mengasumsikan bahwa setiap dokumen dalam korpus dapat dijelaskan oleh kombinasi dari beberapa topik. Topik-topik ini dianggap sebagai distribusi probabilitas dari kata-kata.</p></li>
 <li><p>n_components=3: Parameter ini menentukan jumlah topik yang ingin diidentifikasi oleh model. Dalam contoh ini, model LDA akan mencoba mengidentifikasi 3 topik.</p></li>
 <li><p>doc_topic_prior=0.2 dan topic_word_prior=0.1: Ini adalah parameter yang mengontrol prior distribusi Dirichlet untuk masing-masing dokumen terhadap topik dan masing-masing topik terhadap kata. Nilai yang lebih tinggi menunjukkan bahwa topik atau kata-kata mungkin muncul dalam dokumen dengan probabilitas lebih besar.</p></li>
 <li><p>random_state=42: Ini adalah seed untuk generator angka acak, memastikan bahwa hasilnya dapat direproduksi jika Anda menjalankan kode ini beberapa kali.</p></li>
 <li><p>max_iter=1: Parameter ini menentukan jumlah iterasi maksimum yang akan dilakukan oleh model. Dalam contoh ini, model hanya akan dilatih untuk satu iterasi.</p></li>
-<li><p>lda.fit_transform(Data_TM): Metode ini mengambil data Data_TM dan melatih model LDA ke data tersebut. Transformasi dilakukan untuk menghasilkan representasi topik dari dokumen. Hasilnya disimpan dalam variabel lda_top.</p></li>
+<li><p>lda.fit_transform(Data_TM): Metode ini mengambil data Data_TM dan melatih model LDA ke data tersebut. Transformasi dilakukan untuk menghasilkan representasi topik dari dokumen. Hasilnya disimpan dalam variabel lda_top.</p>
+<p><span class="math notranslate nohighlight">\(N = \text{Jumlah kata dalam dokumen}\)</span></p>
+<p><span class="math notranslate nohighlight">\(M = \text{Jumlah dokumen dalam koleksi}\)</span></p>
+<p><span class="math notranslate nohighlight">\(K = \text{Jumlah topik}\)</span></p>
+<p><span class="math notranslate nohighlight">\(w_{ij} = \text{Kata ke } j \text{ dalam dokumen ke } i\)</span></p>
+<p><span class="math notranslate nohighlight">\(z_{ij} = \text{Topik yang di-assign pada kata } w_{ij}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\theta_i = \text{Distribusi topik untuk dokumen ke } i\)</span></p>
+<p><span class="math notranslate nohighlight">\(\beta_k = \text{Distribusi kata untuk topik ke } k\)</span></p>
+</li>
+<li><p>Model Probabilistik LDA:</p>
+<p>Topik to Dokumen:</p>
+<p><span class="math notranslate nohighlight">\(p(\theta_i | \alpha) = \text{Dirichlet}(\theta_i | \alpha)\)</span></p>
+<p>Kata to Topik:</p>
+<p><span class="math notranslate nohighlight">\(p(\beta_k | \eta) = \text{Dirichlet}(\beta_k | \eta)\)</span></p>
+<p>Topik to Kata:</p>
+<p><span class="math notranslate nohighlight">\(p(z_{ij} = k | \theta_i) = \theta_{ik}\)</span></p>
+<p>Kata to Kata:</p>
+<p><span class="math notranslate nohighlight">\(p(w_{ij} | z_{ij} = k, \beta_k) = \beta_{kw_{ij}}\)</span></p>
+<p>Inferensi pada Tingkat Dokumen (Topik to Dokumen):</p>
+<p><span class="math notranslate nohighlight">\(p(\theta_i | \text{Data}, \alpha, \beta) \propto p(\text{Data} | \theta_i, \beta) p(\theta_i | \alpha)\)</span></p>
+<p>Probabilitas Topik to Kata:</p>
+<p><span class="math notranslate nohighlight">\(p(z_{ij} = k | \text{Data}) = \frac{n_{ik} + \alpha_k}{\sum_{k'} (n_{ik'} + \alpha_{k'})}\)</span></p>
+<p>Probabilitas Kata to Topik:</p>
+<p><span class="math notranslate nohighlight">\(p(w_{ij} | z_{ij} = k, \text{Data}) = \frac{m_{kw_{ij}} + \beta_{kw_{ij}}}{\sum_{w'} (m_{kw'} + \beta_{kw'})}\)</span></p>
+</li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5305,7 +5375,7 @@ Name: Judul, Length: 345, dtype: object
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="PPW.html"
@@ -5347,7 +5417,8 @@ Name: Judul, Length: 345, dtype: object
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slang-words">Slang Words</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stopwords-and-tokenize">Stopwords and Tokenize</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tf-idf">TF-IDF</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering-k-means">clustering K-Means</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">TF-IDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clustering-k-means">Clustering K-Means</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#silhouette-score">Silhouette Score</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lda">LDA</a></li>
 </ul>
@@ -5371,6 +5442,7 @@ By Bagas Pratama Putra
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -5397,8 +5469,8 @@ By Bagas Pratama Putra
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>
