@@ -9,8 +9,6 @@ from sklearn.metrics import accuracy_score, classification_report
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
-nltk.download('punkt')
-
 # Fungsi untuk membersihkan teks
 def clean_text(text):
     # Lakukan pembersihan teks sesuai kebutuhan (misalnya, menghilangkan karakter khusus)
