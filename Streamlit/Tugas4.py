@@ -24,6 +24,9 @@ def replace_slang_words(text):
 # Fungsi untuk memproses data
 def process_data(data):
     # Membersihkan teks
+    nltk.download('stopwords')
+    nltk.download('punkt')
+
     clean_text_data = data.apply(clean_text)
 
     # Mengganti kata-kata slang
